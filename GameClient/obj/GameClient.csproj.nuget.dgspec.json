@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\DSD_SOAP\\GameClient\\GameClient.csproj": {}
+    "/home/lucashbd/Área de trabalho/DSD_SOAP/GameClient/GameClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\DSD_SOAP\\GameClient\\GameClient.csproj": {
+    "/home/lucashbd/Área de trabalho/DSD_SOAP/GameClient/GameClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\DSD_SOAP\\GameClient\\GameClient.csproj",
+        "projectUniqueName": "/home/lucashbd/Área de trabalho/DSD_SOAP/GameClient/GameClient.csproj",
         "projectName": "GameClient",
-        "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\DSD_SOAP\\GameClient\\GameClient.csproj",
-        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\DSD_SOAP\\GameClient\\obj\\",
+        "projectPath": "/home/lucashbd/Área de trabalho/DSD_SOAP/GameClient/GameClient.csproj",
+        "packagesPath": "/home/lucashbd/.nuget/packages/",
+        "outputPath": "/home/lucashbd/Área de trabalho/DSD_SOAP/GameClient/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/lucashbd/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -46,6 +41,10 @@
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[8.1.1, )"
             }
           },
           "imports": [
@@ -64,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

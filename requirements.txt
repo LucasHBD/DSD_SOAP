@@ -1,0 +1,8 @@
+Microsoft.AspNetCore.App
+Microsoft.Extensions.DependencyInjection
+Microsoft.Extensions.Hosting
+CoreWCF
+CoreWCF.Configuration
+Microsoft.AspNetCore.Mvc.NewtonsoftJson
+Microsoft.Extensions.Http
+Microsoft.AspNetCore.OpenApi

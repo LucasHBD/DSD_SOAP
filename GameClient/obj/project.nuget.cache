@@ -1,13 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "qkQdjGHMnUk=",
+  "dgSpecHash": "SofHxOAC+XtLsKeiLtz9p0/ZMlPzoZ0EagT/vr3Ci7cd/clPUhFZmNhW7lCPGiPD1c/O8jxC7M/QLXfIegM0Rg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\DSD_SOAP\\GameClient\\GameClient.csproj",
+  "projectFilePath": "/home/lucashbd/Área de trabalho/DSD_SOAP/GameClient/GameClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lucas\\.nuget\\packages\\system.io.pipelines\\9.0.2\\system.io.pipelines.9.0.2.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\system.net.http.json\\9.0.2\\system.net.http.json.9.0.2.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\system.text.encodings.web\\9.0.2\\system.text.encodings.web.9.0.2.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\system.text.json\\9.0.2\\system.text.json.9.0.2.nupkg.sha512"
+    "/home/lucashbd/.nuget/packages/microsoft.extensions.objectpool/8.0.10/microsoft.extensions.objectpool.8.0.10.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.io.pipelines/9.0.2/system.io.pipelines.9.0.2.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.net.http.json/9.0.2/system.net.http.json.9.0.2.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.security.cryptography.pkcs/8.0.1/system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.security.cryptography.xml/8.0.2/system.security.cryptography.xml.8.0.2.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.servicemodel.http/8.1.1/system.servicemodel.http.8.1.1.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.servicemodel.primitives/8.1.1/system.servicemodel.primitives.8.1.1.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.text.encodings.web/9.0.2/system.text.encodings.web.9.0.2.nupkg.sha512",
+    "/home/lucashbd/.nuget/packages/system.text.json/9.0.2/system.text.json.9.0.2.nupkg.sha512"
   ],
   "logs": []
 }

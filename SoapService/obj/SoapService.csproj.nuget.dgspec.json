@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/lucashbd/Área de trabalho/DSD_SOAP/SoapService/SoapService.csproj": {}
+  },
+  "projects": {
+    "/home/lucashbd/Área de trabalho/DSD_SOAP/SoapService/SoapService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lucashbd/Área de trabalho/DSD_SOAP/SoapService/SoapService.csproj",
+        "projectName": "SoapService",
+        "projectPath": "/home/lucashbd/Área de trabalho/DSD_SOAP/SoapService/SoapService.csproj",
+        "packagesPath": "/home/lucashbd/.nuget/packages/",
+        "outputPath": "/home/lucashbd/Área de trabalho/DSD_SOAP/SoapService/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lucashbd/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CoreWCF.ConfigurationManager": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "CoreWCF.Http": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "CoreWCF.Primitives": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "System.ServiceModel.Primitives": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
