@@ -6,3 +6,4 @@ CoreWCF.Configuration
 Microsoft.AspNetCore.Mvc.NewtonsoftJson
 Microsoft.Extensions.Http
 Microsoft.AspNetCore.OpenApi
+StackExchange.Redis

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StackExchange.Redis;
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace GameClient
     class Program
     {
         private static readonly HttpClient _httpClient = new HttpClient();
+        private static readonly string redisConnectionString = "localhost"; // Assumindo que o Redis está rodando localmente
 
         static async Task Main(string[] args)
         {
@@ -16,9 +18,20 @@ namespace GameClient
 
             int userGuess = 50;  // Simulando a tentativa do usuário
 
-            await RegisterAttemptAsync(restApiUrl, userGuess); // Chama a API REST
-            await RegisterAttemptSoapAsync(soapServiceUrl, userGuess); // Chama o serviço SOAP
+            // Chama a API REST
+            await RegisterAttemptAsync(restApiUrl, userGuess);
 
+            // Chama a API SOAP
+            await RegisterAttemptSoapAsync(soapServiceUrl, userGuess);
+
+            // Envia a tentativa para a fila Redis
+            await SendToQueueAsync(userGuess); // Envia para a fila Redis
+
+            // Aguardar um momento antes de tentar ler a mensagem da fila
+            await Task.Delay(1000);
+
+            // Lê a mensagem da fila Redis
+            await ReceiveFromQueueAsync();
         }
 
         private static async Task RegisterAttemptAsync(string apiUrl, int guess)
@@ -76,6 +89,51 @@ namespace GameClient
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao registrar tentativa SOAP: {ex.Message}");
+            }
+        }
+
+        // Envia a tentativa para a fila Redis
+        private static async Task SendToQueueAsync(int guess)
+        {
+            try
+            {
+                var connection = await ConnectionMultiplexer.ConnectAsync(redisConnectionString);
+                var db = connection.GetDatabase();
+
+                // Usando uma lista do Redis como fila
+                await db.ListRightPushAsync("guessQueue", guess.ToString());
+
+                Console.WriteLine($"Tentativa {guess} enviada para a fila Redis.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao enviar para a fila Redis: {ex.Message}");
+            }
+        }
+
+        // Recebe uma tentativa da fila Redis
+        private static async Task ReceiveFromQueueAsync()
+        {
+            try
+            {
+                var connection = await ConnectionMultiplexer.ConnectAsync(redisConnectionString);
+                var db = connection.GetDatabase();
+
+                // Pega a próxima tentativa da fila
+                var guess = await db.ListLeftPopAsync("guessQueue");
+
+                if (guess.HasValue)
+                {
+                    Console.WriteLine($"Tentativa recebida da fila Redis: {guess}");
+                }
+                else
+                {
+                    Console.WriteLine("Nenhuma tentativa na fila Redis.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao receber da fila Redis: {ex.Message}");
             }
         }
     }
